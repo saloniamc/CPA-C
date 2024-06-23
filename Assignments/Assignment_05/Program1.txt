@@ -1,0 +1,57 @@
+// Program 1 
+#include <stdio.h> 
+#include <stdlib.h> 
+
+int main(void)
+{
+int a;
+int b;
+int c;
+
+printf("Enter a:");
+scanf("%d", &a);
+
+printf("Enter b:");
+scanf("%d", &b);
+
+printf("Enter c:");
+scanf("%d", &c);
+
+if(a > b)
+{
+puts("1 here because...");
+}
+else
+{
+puts("2 here because...");
+}
+
+if(b < c)
+{
+puts("3 here because...");
+}
+else
+{
+puts("4 here because...");
+}
+
+if(c >= a)
+{
+puts("5 here because...");
+}
+else
+{
+puts("6 here because...");
+}
+
+exit(0);
+}
+
+SOLUTION :-
+
+1. Control flow is here because... a is greater than b 
+2. Control flow is here because... a is less than or equal to b
+3. Control flow is here because... b is less than c
+4. Control flow is here because... b is greater than or equal to c
+5. Control flow is here because... c is greater than or equal to a
+6. Control flow is here because... c is less than a

@@ -1,0 +1,74 @@
+
+// program 4 
+#include <stdio.h> 
+#include <stdlib.h> 
+
+int main(void)
+{
+int a;
+int b;
+int c;
+int d;
+
+printf("Enter a:");
+scanf("%d", &a);
+
+printf("Enter b:");
+scanf("%d", &b);
+
+printf("Enter c:");
+scanf("%d", &c);
+
+printf("Enter a:");
+scanf("%d", &d);
+
+if(a == b && c == d)
+{
+puts("1. here because");
+}
+else if(a == c || b == d)
+{
+puts("2. here because");
+}
+else if(a != c || c != d)
+{
+
+}
+else if(a != d && c != b)
+{
+puts("3. here because");
+}
+else
+{
+puts("4. here because");
+}
+exit(0);
+}
+
+SOLUTION :-
+
+1. Control flow is here because... 
+   a is equal to b 
+   AND
+   c is equal to d
+
+2. Control flow is here because...
+   a is equal to c  
+   AND 
+   b is equal to d
+
+3. Control flow is here because...
+   a is not equal to c 
+   OR 
+   c is not equal to d
+
+4. Control flow is here because...
+   a is not equal to d 
+   AND 
+   c is not equal to b 
+
+5. Control flow is here because...
+   a is not equal to b OR c is not equal to d
+   a is not equal to c AND b is not equal to d
+   a is equal to c AND c is equal to d
+   a is equal to d OR c is equal to b 

@@ -1,0 +1,256 @@
+// BRANCHING STATEMENT PROBLEMS 
+
+// SPECIMEN PROBLEM WITH SOLUTION 
+
+#include <stdio.h> 
+#include <stdlib.h> 
+
+int main(void)
+{
+int a, b, c;
+
+printf("Enter a:");
+scanf("%d", &a);
+
+printf("Enter b:");
+scanf("%d", &b);
+
+printf("Enter c:");
+scanf("%d", &c);
+
+if(a > b)
+{
+puts("Control flow is here because...");
+}
+else if(a < b + c)
+{
+puts("2.Control flow is here because...");
+}
+else
+{
+puts("3.Control flow is here because...")
+}
+
+exit(0);
+}
+
+/* Solution to above problem: 
+1. Control flow is here because... a is greater than b 
+2. Control flow is here because... a is less than b + c 
+3. Control flow is here because... 
+a is not greater than b == a is less than or equal to b 
+a is not less than b + c == a is greater than or equal to b + c 
+*/
+
+/* SOLVE the following refering to the solved example above */
+
+---------------------------------------------------------------------------------
+
+// Program 1 
+#include <stdio.h> 
+#include <stdlib.h> 
+
+int main(void)
+{
+int a;
+int b;
+int c;
+
+printf("Enter a:");
+scanf("%d", &a);
+
+printf("Enter b:");
+scanf("%d", &b);
+
+printf("Enter c:");
+scanf("%d", &c);
+
+if(a > b)
+{
+puts("1 here because...");
+}
+else
+{
+puts("2 here because...");
+}
+
+if(b < c)
+{
+puts("3 here because...");
+}
+else
+{
+puts("4 here because...");
+}
+
+if(c >= a)
+{
+puts("5 here because...");
+}
+else
+{
+puts("6 here because...");
+}
+
+exit(0);
+}
+
+
+
+---------------------------------------------------------------------------------
+
+// Program 2 
+#include <stdio.h> 
+#include <stdlib.h> 
+
+int main(void)
+{
+int a;
+int b;
+int c;
+
+printf("Enter a:");
+scanf("%d", &a);
+
+printf("Enter b:");
+scanf("%d", &b);
+
+printf("Enter c:");
+scanf("%d", &c);
+
+if(a > b)
+{
+puts("here because...");
+}
+else if(a < b)
+{
+puts("here because...");
+}
+else if(a == b)
+{
+puts("here because...");
+}
+else if(b > c)
+{
+puts("here because...");
+}
+else if(b < c)
+{
+puts("here because...");
+}
+else if(b == c)
+{
+puts("here because...");
+}
+else if(c > a)
+{
+puts("here because...");
+}
+else if(c < a)
+{
+puts("here because...");
+}
+else if(c == a)
+{
+puts("here because...");
+}
+else
+{
+// can control flow reach here? 
+puts("here because...");
+}
+exit(0);
+}
+
+---------------------------------------------------------------------------------
+
+// program 3 
+#include <stdio.h> 
+#include <stdlib.h> 
+
+int main(void)
+{
+int a, b, c;
+printf("Enter a:");
+scanf("%d", &a);
+printf("Enter b:");
+scanf("%d", &b);
+printf("Enter c:");
+scanf("%d", &c);
+
+if(a > b && b > c)
+{
+puts("1 here because");
+}
+else if(a > b && c > a)
+{
+puts("2 here because");
+}
+else if(!(a > b && c > a))
+{
+puts("3 here because");
+}
+else if((b > c) && (c > a))
+{
+puts("4 here because");
+}
+else if(b <= c || c <= a)
+{
+puts("5 here because");
+}
+else
+{
+puts("here because...");
+}
+exit(0);
+}
+
+---------------------------------------------------------------------------------
+
+// program 4 
+#include <stdio.h> 
+#include <stdlib.h> 
+
+int main(void)
+{
+int a;
+int b;
+int c;
+int d;
+
+printf("Enter a:");
+scanf("%d", &a);
+
+printf("Enter b:");
+scanf("%d", &b);
+
+printf("Enter c:");
+scanf("%d", &c);
+
+printf("Enter a:");
+scanf("%d", &d);
+
+if(a == b && c == d)
+{
+puts("1. here because");
+}
+else if(a == c || b == d)
+{
+puts("2. here because");
+}
+else if(a != c || c != d)
+{
+puts("3. here because");
+
+}
+else if(a != d && c != b)
+{
+puts("4. here because");
+}
+else
+{
+puts("5. here because");
+}
+
+exit(0);
+}

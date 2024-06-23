@@ -1,0 +1,103 @@
+1.14:
+
+Let int x be a boolean variable, Meaning that it can store only 0 or 1.
+The possible values of x are
+x
+0
+1
+-------------------------------------------------------------------------------
+Let x and y be two boolean variables, meaning that both x and y can store only
+0 or 1. Possible combinations of truth values of x and y are as follows
+
+x y
+0 0
+0 1
+1 0
+1 1
+-------------------------------------------------------------------------------
+Let x, y and z be three boolean variables, meaning that all three variables
+x, y and z can store only 0 or 1.
+x y z
+0 0 0
+0 0 1
+0 1 0
+0 1 1
+
+1 0 0
+1 0 1
+1 1 0
+1 1 1
+
+How to evaluate a boolean expression for all possible values of boolean variables
+in it?
+
+Consider boolean expression, x && y
+value of x && y in all cases
+
+x y x&&y
+0 0 0
+0 1 0
+1 0 0
+1 1 1
+
+Now write down this in words
+when x is 0 and y is 0 then x&&y is 0
+when x is 0 and y is 1 then x&&y is 0
+when x is 1 and y is 0 then x&&y is 0
+when x is 1 and y is 1 then x&&y is 1
+
+Consider following boolean expression,
+x && y || !z
+Let us evaluate above expression for all possible truth values of x, y, z
+
+C1 C2 C3 C4 = !C3 C5=C1 && C2 C6=C5 || C4
+x y z !z x&&y
+0 0 0 1 0 1
+0 0 1 0 0 0
+0 1 0 1 0 1
+0 1 1 0 0 0
+
+1 0 0 1 0 1
+1 0 1 0 0 0
+1 1 0 1 0 1
+1 1 1 0 1 1
+
+Now write this in words
+
+when x is 0 y is 0 and z is 0 then x&&y ||!z is 1
+when x is 0 y is 0 and z is 1 then x&&y ||!z is 1
+when x is 0 y is 1 and z is 0 then x&&y ||!z is 1
+when x is 0 y is 1 and z is 1 then x&&y ||!z is 0
+when x is 1 y is 0 and z is 0 then x&&y ||!z is 1
+when x is 1 y is 0 and z is 1 then x&&y ||!z is 0
+when x is 1 y is 1 and z is 0 then x&&y ||!z is 1
+when x is 1 y is 1 and z is 1 then x&&y ||!z is 1
+-------------------------------------------------------------------------------
+
+Based on above examples calculate the following: 
+
+1  x && y
+2  x && !y
+3  !x && y
+4  !x && !y
+
+5  !(x && y)
+6  !(x && !y)
+7  !(!x && y)
+8  !(x && !y)
+
+9  x || y
+10  x || !y
+11  !x || y
+12  !x || !y
+
+13  x && yy && z
+14  !x && y && !z
+15  (x || y) && z
+16  x && (y || z)
+
+17  !x || y && !z
+18  !x || !y || z
+19  !x && (y && z) || (x && y)
+20  (x && y) || (y && z) || (z && x)
+21  (x || y) && (y || z) && (z || x)

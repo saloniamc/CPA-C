@@ -1,0 +1,307 @@
+-----------------------------------------------------------------------
+
+1]  x && y
+
+Let x and y be two boolean variables, meaning that both x and y can store only
+0 or 1. Possible combinations of truth values of x and y are as follows
+
+x y
+0 0
+0 1
+1 0
+1 1
+
+consider the boolean expression x && yy
+hence values of x && y in all cases are
+
+x y x&&y
+0 0 0
+0 1 0
+1 0 0
+1 1 1
+
+when x is 0 and y is 0 then x&&y is 0
+when x is 0 and y is 1 then x&&y is 0
+when x is 1 and y is 0 then x&&y is 0
+when x is 1 and y is 1 then x&&y is 1
+
+-----------------------------------------------------------------------
+
+2]  x && !y
+
+Let x and y be two boolean variables, meaning that both x and y can store only
+0 or 1. Possible combinations of truth values of x and y are as follows
+
+x y !y  x && !y
+0 0  1  0
+0 1  0  0
+1 0  1  1
+1 1  0  0
+
+when x is 0 and y is 0 then x && !y is 0
+when x is 0 and y is 1 then x && !y is 0
+when x is 1 and y is 0 then x && !y is 1
+when x is 1 and y is 1 then x && !y is 0
+
+-----------------------------------------------------------------------
+
+3]  !x && y
+
+Let x and y be two boolean variables, meaning that both x and y can store only
+0 or 1. Possible combinations of truth values of x and y are as follows
+
+x y
+0 0
+0 1
+1 0
+1 1
+
+consider the boolean expression !x && y
+hence values of !x && y in all cases are
+
+x y !x  !x && y
+0 0 1   0
+0 1 1   1
+1 0 0   0
+1 1 0   0
+
+when x is 0 and y is 0 then !x && y is 0
+when x is 0 and y is 1 then !x && y is 1
+when x is 1 and y is 0 then !x && y is 0
+when x is 1 and y is 1 then !x && y is 0
+
+-----------------------------------------------------------------------
+
+4]  !x && !y
+Let x and y be two boolean variables, meaning that both x and y can store only
+0 or 1. Possible combinations of truth values of x and y are as follows
+
+x y
+0 0
+0 1
+1 0
+1 1
+
+consider the boolean expression !x && !y
+hence values of !x && !y in all cases are
+
+x y !x  !y  !x && !y
+0 0 1   1   1
+0 1 1   0   0 
+1 0 0   1   0
+1 1 0   0   0
+
+when x is 0 and y is 0 then !x && !y is 1
+when x is 0 and y is 1 then !x && !y is 0
+when x is 1 and y is 0 then !x && !y is 0
+when x is 1 and y is 1 then !x && !y is 0
+
+-----------------------------------------------------------------------
+
+5]  !(x && y)
+Let x and y be two boolean variables, meaning that both x and y can store only
+0 or 1. Possible combinations of truth values of x and y are as follows
+
+x y
+0 0
+0 1
+1 0
+1 1
+
+consider the boolean expression !(x && y)
+hence values of !(x && y) in all cases are
+
+x y  (x && y)  !(x && y)
+0 0  0         1
+0 1  0         1
+1 0  0         1
+1 1  1         0
+
+when x is 0 and y is 0 then !(x && y) is 1
+when x is 0 and y is 1 then !(x && y) is 1
+when x is 1 and y is 0 then !(x && y) is 1
+when x is 1 and y is 1 then !(x && y) is 0
+
+-----------------------------------------------------------------------
+
+6]  !(x && !y)
+Let x and y be two boolean variables, meaning that both x and y can store only
+0 or 1. Possible combinations of truth values of x and y are as follows
+
+x y
+0 0
+0 1
+1 0
+1 1
+
+consider the boolean expression !(x && !y)
+hence values of !(x && !y) in all cases are
+
+x y !y (x && !y)  !(x && !y)
+0 0 1  0           1
+0 1 0  0           1
+1 0 1  1           0
+1 1 0  0           1
+
+when x is 0 and y is 0 then !(x && !y) is 1
+when x is 0 and y is 1 then !(x && !y) is 1
+when x is 1 and y is 0 then !(x && !y) is 0
+when x is 1 and y is 1 then !(x && !y) is 1
+
+-----------------------------------------------------------------------
+
+7]  !(!x && y)
+Let x and y be two boolean variables, meaning that both x and y can store only
+0 or 1. Possible combinations of truth values of x and y are as follows
+
+x y
+0 0
+0 1
+1 0
+1 1
+
+consider the boolean expression !(!x && y)
+hence values of !(!x && y) in all cases are
+
+x y !x  (!x && y)  !(!x && y)
+0 0 1   0           1
+0 1 1   1           0
+1 0 0   0           1
+1 1 0   0           1
+ 
+when x is 0 and y is 0 then !(!x && y) is 1
+when x is 0 and y is 1 then !(!x && y) is 0
+when x is 1 and y is 0 then !(!x && y) is 1
+when x is 1 and y is 1 then !(!x && y) is 1
+
+-----------------------------------------------------------------------
+
+8]  !(x && !y)
+Let x and y be two boolean variables, meaning that both x and y can store only
+0 or 1. Possible combinations of truth values of x and y are as follows
+
+x y
+0 0
+0 1
+1 0
+1 1
+
+consider the boolean expression !(x && !y)
+hence values of !(x && !y) in all cases are
+
+x y !y  (x && !y)  !(x && !y)
+0 0 1   0           1
+0 1 0   0           1
+1 0 1   1           0
+1 1 0   0           1
+
+when x is 0 and y is 0 then !(x && !y) is 1
+when x is 0 and y is 1 then !(x && !y) is 1
+when x is 1 and y is 0 then !(x && !y) is 0
+when x is 1 and y is 1 then !(x && !y) is 1
+
+-----------------------------------------------------------------------
+
+9]  x || y
+Let x and y be two boolean variables, meaning that both x and y can store only
+0 or 1. Possible combinations of truth values of x and y are as follows
+
+x y
+0 0
+0 1
+1 0
+1 1
+
+consider the boolean expression x || y
+hence values of x || y in all cases are
+
+x y  (x || y)
+0 0  0
+0 1  1
+1 0  1
+1 1  1
+
+when x is 0 and y is 0 then x || y is 0
+when x is 0 and y is 1 then x || y is 1
+when x is 1 and y is 0 then x || y is 1
+when x is 1 and y is 1 then x || y is 1
+
+-----------------------------------------------------------------------
+
+10] x || !y
+Let x and y be two boolean variables, meaning that both x and y can store only
+0 or 1. Possible combinations of truth values of x and y are as follows
+
+x y
+0 0
+0 1
+1 0
+1 1
+
+consider the boolean expression x || !y
+hence values of x || !y in all cases are
+
+x y !y (x || !y)
+0 0 1   1
+0 1 0   0
+1 0 1   1
+1 1 0   1
+
+when x is 0 and y is 0 then (x || !y) is 1
+when x is 0 and y is 1 then (x || !y) is 0
+when x is 1 and y is 0 then (x || !y) is 1
+when x is 1 and y is 1 then (x || !y) is 1
+
+-----------------------------------------------------------------------
+
+11]  !x || y
+Let x and y be two boolean variables, meaning that both x and y can store only
+0 or 1. Possible combinations of truth values of x and y are as follows
+
+x y
+0 0
+0 1
+1 0
+1 1
+
+consider the boolean expression !x || y
+hence values of !x || y in all cases are
+
+x y !x  (!x || y)
+0 0 1   1
+0 1 1   1
+1 0 0   0
+1 1 0   1
+
+when x is 0 and y is 0 then (!x || y) is 1
+when x is 0 and y is 1 then (!x || y) is 1
+when x is 1 and y is 0 then (!x || y) is 0
+when x is 1 and y is 1 then (!x || y) is 1
+
+-----------------------------------------------------------------------
+
+12]  !x || !y
+Let x and y be two boolean variables, meaning that both x and y can store only
+0 or 1. Possible combinations of truth values of x and y are as follows
+
+x y
+0 0
+0 1
+1 0
+1 1
+
+consider the boolean expression !x || !y
+hence values of !x || !y in all cases are
+
+x y !x !y  (!x || !y)
+0 0 1  1    1
+0 1 1  0    1
+1 0 0  1    1
+1 1 0  0    0
+
+when x is 0 and y is 0 then !x || !y is 
+when x is 0 and y is 1 then !x || !y is 1
+when x is 1 and y is 0 then !x || !y is 1
+when x is 1 and y is 1 then !x || !y is 0
+
+-----------------------------------------------------------------------

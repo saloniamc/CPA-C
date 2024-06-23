@@ -1,0 +1,362 @@
+--------------------------------------------------------------------------
+
+13]  x && y && z
+
+Let x, y and z be three boolean variables, meaning that all three variables
+x, y and z can store only 0 or 1.
+x y z
+0 0 0
+0 0 1
+0 1 0
+0 1 1
+
+1 0 0
+1 0 1
+1 1 0
+1 1 1
+
+consider the boolean expression x && yy && z
+hence values of x && y && z in all cases are
+
+C1 C2 C3 C4 = (C1&&C2) C5 = (C4&&C3)
+x  y  z  (x && y)      (x && y && z)
+0  0  0  0             0
+0  0  1  0             0
+0  1  0  0             0
+0  1  1  0             0
+1  0  0  0             0
+1  0  1  0             0
+1  1  0  1             0
+1  1  1  1             1
+
+when x is 0 y is 0 and z is 0 then (x && y && z) is 0
+when x is 0 y is 0 and z is 1 then (x && y && z) is 0
+when x is 0 y is 1 and z is 0 then (x && y && z) is 0
+when x is 0 y is 1 and z is 1 then (x && y && z) is 0
+when x is 1 y is 0 and z is 0 then (x && y && z) is 0
+when x is 1 y is 0 and z is 1 then (x && y && z) is 0
+when x is 1 y is 1 and z is 0 then (x && y && z) is 0
+when x is 1 y is 1 and z is 1 then (x && y && z) is 1
+
+--------------------------------------------------------------------------
+
+14]  !x && y && !z
+
+Let x, y and z be three boolean variables, meaning that all three variables
+x, y and z can store only 0 or 1.
+x y z
+0 0 0
+0 0 1
+0 1 0
+0 1 1
+
+1 0 0
+1 0 1
+1 1 0
+1 1 1
+
+consider the boolean expression !x && y && !z
+hence values of !x && y && !z in all cases are
+
+C1 C2 C3 C4 C5 C6 = (C4&&C2) C7 = (C6&&C5)
+x  y  z  !x !z  !x && y      !x && y && !z
+0  0  0  1  1   0            0
+0  0  1  1  0   0            0
+0  1  0  1  1   1            1
+0  1  1  1  0   1            0
+1  0  0  0  1   0            0
+1  0  1  0  0   0            0
+1  1  0  0  1   0            0
+1  1  1  0  0   0            0
+
+when x is 0 y is 0 and z is 1 then !x && y && !z is 0
+when x is 0 y is 1 and z is 0 then !x && y && !z is 0
+when x is 0 y is 1 and z is 1 then !x && y && !z is 1
+when x is 1 y is 0 and z is 0 then !x && y && !z is 0
+when x is 0 y is 0 and z is 0 then !x && y && !z is 0
+when x is 1 y is 0 and z is 1 then !x && y && !z is 0
+when x is 1 y is 1 and z is 0 then !x && y && !z is 0
+when x is 1 y is 1 and z is 1 then !x && y && !z is 0
+
+--------------------------------------------------------------------------
+
+15]  (x || y) && z
+
+Let x, y and z be three boolean variables, meaning that all three variables
+x, y and z can store only 0 or 1.
+x y z
+0 0 0
+0 0 1
+0 1 0
+0 1 1
+
+1 0 0
+1 0 1
+1 1 0
+1 1 1
+
+consider the boolean expression (x || y) && z
+hence values of (x || y) && z in all cases are
+
+C1 C2 C3 C4 = (x||y) C5 = (C4&&C3)
+x  y  z  x || y      (x || y) && z
+0  0  0  0           0
+0  0  1  0           0
+0  1  0  1           0
+0  1  1  1           1
+1  0  0  1           0
+1  0  1  1           1
+1  1  0  1           0
+1  1  1  1           1
+
+when x is 0 y is 0 and z is 0 then (x || y) && z is 0
+when x is 0 y is 0 and z is 1 then (x || y) && z is 0
+when x is 0 y is 1 and z is 0 then (x || y) && z is 0
+when x is 0 y is 1 and z is 1 then (x || y) && z is 1
+when x is 1 y is 0 and z is 0 then (x || y) && z is 0
+when x is 1 y is 0 and z is 1 then (x || y) && z is 1
+when x is 1 y is 1 and z is 0 then (x || y) && z is 0
+when x is 1 y is 1 and z is 1 then (x || y) && z is 1
+
+--------------------------------------------------------------------------
+
+16]  x && (y || z)
+
+Let x, y and z be three boolean variables, meaning that all three variables
+x, y and z can store only 0 or 1.
+x y z
+0 0 0
+0 0 1
+0 1 0
+0 1 1
+
+1 0 0
+1 0 1
+1 1 0
+1 1 1
+
+consider the boolean expression x && (y || z)
+hence values of x && (y || z) in all cases are
+
+C1 C2 C3 C4 = (C2||C3) C5 = (C1&&C4)
+x  y  z  (y || z)      x && (y || z)
+0  0  0  0             0
+0  0  1  1             0
+0  1  0  1             0
+0  1  1  1             0
+1  0  0  0             0
+1  0  1  1             1
+1  1  0  1             1
+1  1  1  1             1
+
+when x is 0 y is 0 and z is 0 then x && (y || z) is 0
+when x is 0 y is 0 and z is 1 then x && (y || z) is 0
+when x is 0 y is 1 and z is 0 then x && (y || z) is 0
+when x is 0 y is 1 and z is 1 then x && (y || z) is 0
+when x is 1 y is 0 and z is 0 then x && (y || z) is 0
+when x is 1 y is 0 and z is 1 then x && (y || z) is 1
+when x is 1 y is 1 and z is 0 then x && (y || z) is 1
+when x is 1 y is 1 and z is 1 then x && (y || z) is 1
+
+---------------------------------------------------------------------------------------
+
+17]  !x || y && !z
+
+Let x, y and z be three boolean variables, meaning that all three variables
+x, y and z can store only 0 or 1.
+x y z
+0 0 0
+0 0 1
+0 1 0
+0 1 1
+
+1 0 0
+1 0 1
+1 1 0
+1 1 1
+
+consider the boolean expression !x || y && !z
+hence values of !x || y && !z in all cases are
+
+C1 C2 C3 C4 C5 C6 = (C4||C2) C7 = (C6&&C5)
+x  y  z  !x !z !x || y       !x || y && !z
+0  0  0  1  1  1             1
+0  0  1  1  0  1             0
+0  1  0  1  1  1             1
+0  1  1  1  0  1             0
+1  0  0  0  1  0             0
+1  0  1  0  0  0             0
+1  1  0  0  1  1             1
+1  1  1  0  0  1             0
+
+when x is 0 y is 0 and z is 0 then !x || y && !z is 1
+when x is 0 y is 0 and z is 1 then !x || y && !z is 0
+when x is 0 y is 1 and z is 0 then !x || y && !z is 1
+when x is 0 y is 1 and z is 1 then !x || y && !z is 0
+when x is 1 y is 0 and z is 0 then !x || y && !z is 0
+when x is 1 y is 0 and z is 1 then !x || y && !z is 0
+when x is 1 y is 1 and z is 0 then !x || y && !z is 1
+when x is 1 y is 1 and z is 1 then !x || y && !z is 0
+
+--------------------------------------------------------------------------
+
+18]  !x || !y || z
+
+Let x, y and z be three boolean variables, meaning that all three variables
+x, y and z can store only 0 or 1.
+x y z
+0 0 0
+0 0 1
+0 1 0
+0 1 1
+
+1 0 0
+1 0 1
+1 1 0
+1 1 1
+
+consider the boolean expression !x || !y || z
+hence values of !x || !y || z in all cases are
+
+C1 C2 C3 C4 C5 C6 = (C4||C5) C7 = (C6||C3)
+x  y  z  !x !y !x || !y      !x || !y || z
+0  0  0  1  1  1             1
+0  0  1  1  1  1             1
+0  1  0  1  0  1             1
+0  1  1  1  0  1             1
+1  0  0  0  1  1             1
+1  0  1  0  1  1             1
+1  1  0  0  0  0             0
+1  1  1  0  0  0             1
+
+when x is 0 y is 0 and z is 0 then !x || !y || z is 1
+when x is 0 y is 0 and z is 1 then !x || !y || z is 1
+when x is 0 y is 1 and z is 0 then !x || !y || z is 1
+when x is 0 y is 1 and z is 1 then !x || !y || z is 1
+when x is 1 y is 0 and z is 0 then !x || !y || z is 1
+when x is 1 y is 0 and z is 1 then !x || !y || z is 1
+when x is 1 y is 1 and z is 0 then !x || !y || z is 0
+when x is 1 y is 1 and z is 1 then !x || !y || z is 1
+
+--------------------------------------------------------------------------
+
+19]  !x && (y && z) || (x && y)
+
+Let x, y and z be three boolean variables, meaning that all three variables
+x, y and z can store only 0 or 1.
+x y z
+0 0 0
+0 0 1
+0 1 0
+0 1 1
+
+1 0 0
+1 0 1
+1 1 0
+1 1 1
+
+consider the boolean expression !x && (y && z) || (x && y)
+hence values of !x && (y && z) || (x && y) in all cases are
+
+C1 C2 C3 C4 C5 = (C2&&C3) C6 = (C1&&C2) C7 = (C4&&C5)   C8 = (C7||C6)
+x  y  z  !x (y && z)      (x && y)      !x && (y && z)  !x && (y && z) || (x && y)
+0  0  0  1  0             0             0               0
+0  0  1  1  0             0             0               0
+0  1  0  1  0             0             0               0
+0  1  1  1  1             0             1               1
+1  0  0  0  0             0             0               0
+1  0  1  0  0             0             0               0
+1  1  0  0  0             1             0               1
+1  1  1  0  1             1             0               1
+
+when x is 0 y is 0 and z is 0 then !x && (y && z) || (x && y) is 0
+when x is 0 y is 0 and z is 1 then !x && (y && z) || (x && y) is 0
+when x is 0 y is 1 and z is 0 then !x && (y && z) || (x && y) is 0
+when x is 0 y is 1 and z is 1 then !x && (y && z) || (x && y) is 1
+when x is 1 y is 0 and z is 0 then !x && (y && z) || (x && y) is 0
+when x is 1 y is 0 and z is 1 then !x && (y && z) || (x && y) is 0
+when x is 1 y is 1 and z is 0 then !x && (y && z) || (x && y) is 1
+when x is 1 y is 1 and z is 1 then !x && (y && z) || (x && y) is 1
+
+--------------------------------------------------------------------------
+
+20]  (x && y) || (y && z) || (z && x)
+
+Let x, y and z be three boolean variables, meaning that all three variables
+x, y and z can store only 0 or 1.
+x y z
+0 0 0
+0 0 1
+0 1 0
+0 1 1
+
+1 0 0
+1 0 1
+1 1 0
+1 1 1
+
+consider the boolean expression (x && y) || (y && z) || (z && x)
+hence values of (x && y) || (y && z) || (z && x) in all cases are
+
+C1 C2 C3 C4 = (C1&&C2) C5 = (C2&&C3) C6 = (C3&&C1) C7 = (C4||C5)         C8 = (C7||C6)
+x  y  z  (x && y)      (y && z)      (z && x)      (x && y) || (y && z)  (x && y) || (y && z) || (z && x)
+0  0  0  0             0             0             0                     0
+0  0  1  0             0             0             0                     0
+0  1  0  0             0             0             0                     0
+0  1  1  0             1             0             1                     1
+1  0  0  0             0             0             0                     0
+1  0  1  0             0             1             0                     1
+1  1  0  1             0             0             1                     1
+1  1  1  1             1             1             1                     1
+
+when x is 0 y is 0 and z is 0 then (x && y) || (y && z) || (z && x) is 0
+when x is 0 y is 0 and z is 1 then (x && y) || (y && z) || (z && x) is 0
+when x is 0 y is 1 and z is 0 then (x && y) || (y && z) || (z && x) is 0
+when x is 0 y is 1 and z is 1 then (x && y) || (y && z) || (z && x) is 1
+when x is 1 y is 0 and z is 0 then (x && y) || (y && z) || (z && x) is 0
+when x is 1 y is 0 and z is 1 then (x && y) || (y && z) || (z && x) is 1
+when x is 1 y is 1 and z is 0 then (x && y) || (y && z) || (z && x) is 1
+when x is 1 y is 1 and z is 1 then (x && y) || (y && z) || (z && x) is 1
+
+--------------------------------------------------------------------------
+
+21]  (x || y) && (y || z) && (z || x)
+
+Let x, y and z be three boolean variables, meaning that all three variables
+x, y and z can store only 0 or 1.
+x y z
+0 0 0
+0 0 1
+0 1 0
+0 1 1
+
+1 0 0
+1 0 1
+1 1 0
+1 1 1
+
+consider the boolean expression (x || y) && (y || z) && (z || x)
+hence values of (x || y) && (y || z) && (z || x) in all cases are
+
+C1 C2 C3 C4 = (C1||C2) C5 = (C2||C3) C6 = (C3||C1) C7 = (C4&&C5)         C8 = (C7&&C6)
+x  y  z  (x || y)      (y || z)      (z || x)      (x || y) && (y || z)  (x || y) && (y || z) && (z || x)
+0  0  0  0              0            0              0                    0
+0  0  1  0              1            1              0                    0
+0  1  0  1              1            0              1                    0
+0  1  1  1              1            1              1                    1
+1  0  0  1              0            1              0                    0
+1  0  1  1              1            1              1                    1
+1  1  0  1              1            1              1                    1
+1  1  1  1              1            1              1                    1
+
+when x is 0 y is 0 and z is 0 then (x || y) && (y || z) && (z || x) is 0
+when x is 0 y is 0 and z is 1 then (x || y) && (y || z) && (z || x) is 0
+when x is 0 y is 1 and z is 0 then (x || y) && (y || z) && (z || x) is 0
+when x is 0 y is 1 and z is 1 then (x || y) && (y || z) && (z || x) is 1
+when x is 1 y is 0 and z is 0 then (x || y) && (y || z) && (z || x) is 0
+when x is 1 y is 0 and z is 1 then (x || y) && (y || z) && (z || x) is 1
+when x is 1 y is 1 and z is 0 then (x || y) && (y || z) && (z || x) is 1
+when x is 1 y is 1 and z is 1 then (x || y) && (y || z) && (z || x) is 1
+
+
+--------------------------------------------------------------------------

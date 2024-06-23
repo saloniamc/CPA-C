@@ -1,0 +1,42 @@
+2] Determine the value in rs. 
+
+float a = 3.4; 
+float b = 2.0; 
+float c = 2.5; 
+float d = 9.1; 
+
+2.1. rs = a + b + c + d; 
+2.2. rs = a/b + c/d; 
+2.3. rs = (a+b)/(c+d); 
+2.4. rs = a * 9 / 5 + 32; 
+2.5. rs = ((a+b+c)/2)*((a+b+c)/2 – a)*((a+b+c)/2 – b)*((a + b + c)/2 – c); 
+2.6. rs = ((a+b+c+d)/2-a)*((a+b+c+d)/2-b)*(a+b+c+d)/2-c)*
+((a+b+c+d)/2-d); 
+2.7.rs = (a + b + c + d) / 4; 
+2.8. rs = a + b + c + d / 4; 
+2.9. rs = (-b + b*b – 4*a*c)/(2*a); 
+2.10. rs = (-b - b*b – 4*a*c)/(2*a); 
+2.11. rs = ((((a + b) * c) + d)/c) + a; 
+2.12. rs = d – d*d/2 + d*d*d*d/4*3*2*1; 
+2.13. rs = (b*b + c*c – a*a)/(2*b*c); 
+2.14. rs = 2 * 3.1415 * b; 
+2.15. rs = (3.1415/180.0) * b; 
+2.16. rs = (180.0/3.1415) * b; 
+2.17. rs = a*a – 2*a*b + b*b 
+ rs = (a-b) * (a-b) 
+2.18. rs = a*a + 2*a*b + b*b 
+ rs = (a+b) * (a+b) 
+2.19. rs = a*a*a + 3*a*a*b + 3*a*b*b + b*b*b ;
+ rs = (a+b) * (a+b) * (a+b); 
+2.20. rs = a*a*a – 3*a*a*b + 3*a*b*b – b*b*b
+ rs = (a-b) * (a-b) * (a-b) 
+2.21. rs = (a+b)*(a+b) – (a-b)*(a-b)
+ rs = 4 * a * b 
+2.22. rs = 2 * (a*a + b*b)
+ rs = (a+b) * (a+b) + (a-b) * (a-b) 
+2.23. rs = a*a*a + b*b*b 
+ rs = (a+b)*(a+b)*(a+b) – 3*a*b*(a+b) 
+2.24. rs = a*a*a – b*b*b 
+ rs = (a-b)*(a-b)*(a-b) + 3*a*b*(a-b)
+ 2.25. rs = a*a*a + b*b*b + c*c*c – 3*a*b*c 
+ rs = (a+b+c)*(a*a +b*b+c*c -a*b -b*c-c*a)

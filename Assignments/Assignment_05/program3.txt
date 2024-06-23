@@ -1,0 +1,78 @@
+
+// program 3 
+#include <stdio.h> 
+#include <stdlib.h> 
+
+int main(void)
+{
+int a, b, c;
+printf("Enter a:");
+scanf("%d", &a);
+printf("Enter b:");
+scanf("%d", &b);
+printf("Enter c:");
+scanf("%d", &c);
+if(a > b && b > c)
+{
+puts("1 here because");
+}
+else if(a > b && c > a)
+{
+puts("2 here because");
+}
+else if(!(a > b && c > a))
+{
+puts("3 here because");
+}
+else if((b > c) && (c > a))
+{
+puts("4 here because");
+}
+else if(b <= c || c <= a)
+{
+puts("5 here because");
+}
+else
+{
+puts("6 here because...");
+}
+exit(0);
+}
+
+SOLUTION :-
+
+1. Control flow is here because... 
+   a is greater than b
+   AND
+   b is greater than c
+
+2. Control flow is here because... 
+   a is greater than b
+   AND
+   c is greater than a
+   
+3. Control flow is here because... 
+   a is not greater than b
+   AND
+   c is not greater than a
+   
+4. Control flow is here because... 
+   b is greater than c 
+   AND
+   c is greater then a 
+
+5. Control flow is here because... 
+   b is less than or equal to c 
+   OR 
+   c is less than or equal to a
+
+6. Control flow is here because... 
+   a is not greater than b  OR  b is not greater than c 
+   a is not greater than b  OR  c is not greater than a
+   a is greater than b      OR  c is greater than a
+   b is not greater than c  OR  c is not greater then a 
+   b is greater than c      AND   c is greater than a
+
+
+
+   

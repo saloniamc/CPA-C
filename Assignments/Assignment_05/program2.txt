@@ -1,0 +1,74 @@
+// Program 2 
+#include <stdio.h> 
+#include <stdlib.h> 
+
+int main(void)
+{
+int a;
+int b;
+int c;
+
+printf("Enter a:");
+scanf("%d", &a);
+
+printf("Enter b:");
+scanf("%d", &b);
+
+printf("Enter c:");
+scanf("%d", &c);
+
+if(a > b)
+{
+puts("here because...");
+}
+else if(a < b)
+{
+puts("here because...");
+}
+else if(a == b)
+{
+puts("here because...");
+}
+else if(b > c)
+{
+puts("here because...");
+}
+else if(b < c)
+{
+puts("here because...");
+}
+else if(b == c)
+{
+puts("here because...");
+}
+else if(c > a)
+{
+puts("here because...");
+}
+else if(c < a)
+{
+puts("here because...");
+}
+else if(c == a)
+{
+puts("here because...");
+}
+else
+{
+// can control flow reach here? 
+puts("here because...");
+}
+exit(0);
+}
+
+
+1. Control flow is here because... a is greater than b 
+2. Control flow is here because... a is less than b
+3. Control flow is here because... a is equal to b 
+4. Control flow is here because... b is greater than c
+5. Control flow is here because... b is less than c 
+6. Control flow is here because... b is equal to c 
+7. Control flow is here because... c is greater than a
+8. Control flow is here because... c is less than a 
+9. Control flow is here because... c is equal to a
+10. No the control flow won't reach here.

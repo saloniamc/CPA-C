@@ -1,0 +1,102 @@
+ Write conditions in words.
+-----------------------------------------------------------
+e.g
+[1]
+
+rs = (a > b) || (c <= d) || (d == e);
+ANS:
+rs
+
+is assigned to the evaluation of
+
+a is greater than b
+OR
+c is less than or equal to d
+OR
+d is equal to e.
+
+[2] rs = !(a > b)
+rs
+is assigned to evaluation of
+not of a is greater than b
+------------------------------------------
+
+
+
+
+1   rs = a > b;
+2  rs = a < b;
+3  rs = a >= b;
+4  rs = a <= b;
+5  rs = a == b;
+6  rs = a != b;
+  
+7  rs = d > e;
+8  rs = d < e;
+9  rs = d >= e;
+10  rs = d <= e;
+11  rs = d == e;
+12  rs = d != e;
+  
+13  rs= f && f;
+14  rs = f && g;
+15  rs = g && f;
+16  rs = g && g;
+  
+17  rs = f || f;
+18  rs = f || g;
+19  rs = g || f;
+20  rs = g || g;
+  
+21  rs = !f;
+22  rs = !g;
+  
+23  rs = f && !g;
+24  rs = f || !g;
+25  rs = !f && g;
+26  rs = !f || g;
+  
+27  rs = !f && !g;
+28  rs = !f || !g;
+  
+29  rs = f && g || e;
+30  rs = f && (!g | |e);
+31  rs = f || g && e;
+32  rs = (f || g) && e;
+  
+33  rs = (f && g) || (!f && !g);
+34  rs = (f || g) && (f || g);
+35  rs = (f && !g) || (!f && g);
+36  rs = (f || !g) && (!f || g);
+  
+37  rs = !(a > b);
+38  rs = !(a >= b);
+39  rs = !(a < b);
+40  rs = !(a <= b);
+41  rs = !(a == b);
+42  rs = !(a != b);
+43  rs = !(d == e);
+44  rs = !(d != e);
+  
+45  rs = (a > b) && (c > d);
+46  rs = !((a > b) && (c > d));
+47  rs = !(a > b) || !(c > d);
+48  rs = (a <= b) || (c <= d);
+  
+49  rs = (a > b) || (c > d);
+50  rs = !((a > b) || (c > d));
+51  rs = !(a > b) && !(c > d);
+52  rs = (a <= b) && (c <= d);
+  
+53  rs = (a > b) || (c <= d) || (d == e);
+54  rs = (a < b) && (c > d) && (d == e);
+55  rs = !(a < b) && !(c > d) && !(d == e);
+56  rs = !(a < b) || !(c > d) || !(d == e);
+57  rs = (a == b) || (b == c) || (c == d) || (d == e);
+58  rs = (a == b) && (b == c) && (c == d) && (d == e);
+
+///////////////////////////////////////
+
+SOLUTIONS ARE IN THE NOTEBOOK...
+
+///////////////////////////////////////
